@@ -1,4 +1,10 @@
 
+# Visual Studio
+.vs/
 
+# Rider
+.idea/
 
-*.obj
+# Build 
+obj/
+bin/
