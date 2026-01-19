@@ -2,13 +2,16 @@ namespace Loja.Core.ValueObjects
 {
     public sealed class Cpf
     {
-        
+        public string Value { get; }
+
         public Cpf(string cpf)
         {
             if (!IsValid(cpf))
             {
                 throw new ArgumentException("Cpf inválido");
             }
+
+            Value = string.Concat(cpf.Where(char.IsDigit));
             
         }
     private bool IsValid(string cpf)
