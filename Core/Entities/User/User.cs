@@ -7,16 +7,14 @@ namespace Loja.Core.Entities
         public Guid Id{get;}
         public string Name{get;}
         public Cpf Cpf{get;}
-
         public User(string name, string cpf)
         {
             Id = Guid.NewGuid();
-            Name = name ?? throw new ArgumentException("Nome do Usuário não declarado.");
-
+            Name = name ?? throw new ArgumentException("Nome do usuário não declarado.");
             Cpf = new Cpf(cpf);
         }
 
-        public void BuyProduct(int quantity)
+        public void BuyProduct(int quantity, Product product)
         {
             
         }
